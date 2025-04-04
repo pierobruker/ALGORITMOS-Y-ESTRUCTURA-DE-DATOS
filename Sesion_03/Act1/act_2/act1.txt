@@ -1,0 +1,23 @@
+// Función que calcula la potencia x^y usando recursión.
+double potencia(double x, int y) {
+    double t;
+
+    // Caso base: si el exponente es 0, retornamos 1
+    // Esto tiene complejidad constante O(1)
+    if (y == 0)
+        return 1.0;
+
+    // Caso cuando el exponente es impar
+    // Se hace una llamada recursiva con y - 1
+    // Esto lleva a una recurrencia del tipo T(y) = T(y - 1) + O(1)
+    if (y % 2 == 1)
+        return x * potencia(x, y - 1);
+    
+    else {
+        // Caso cuando el exponente es par
+        // Se hace una llamada recursiva con y / 2
+        // Esto lleva a una recurrencia del tipo T(y) = T(y / 2) + O(1)
+        t = potencia(x, y / 2);
+        return t * t; // multiplicación constante → O(1)
+    }
+}

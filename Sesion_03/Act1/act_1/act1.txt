@@ -1,0 +1,9 @@
+public class act1
+    Intercambia(REF x : ENTERO, REF y : ENTERO){
+        aux : ENTERO; // O(1)
+        aux := x; // O(1)
+        x := y; // O(1)
+        y := aux; // O(1)
+    }
+Asignaciones simples de O(1).
+//complejidad /O(1)

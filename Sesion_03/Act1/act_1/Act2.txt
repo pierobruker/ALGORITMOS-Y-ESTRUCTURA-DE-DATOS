@@ -1,0 +1,14 @@
+FUNCION max(x : ENTERO, y : ENTERO) : ENTERO 
+    result : ENTERO;        /O(1)
+
+    ///solo es una comparacion
+    SI (x >= y) ENTONCES    /O(1)
+    result := x;            /O(1)
+    
+    SINO                    /O(1)
+        result := y;            /O(1)
+    FINSI                   /O(1)
+    DEVOLVER result;        /O(1)
+FINFUNCION                  
+
+//complejidad /O(1)

@@ -1,0 +1,15 @@
+PROCEDIMIENTO ordenar(REF v : VECTOR(ENTERO), tamaño : ENTERO) 
+    i, j, aux : ENTERO; 
+    PARA i DESDE 0 HASTA tamaño-1 HACER         O(n)
+        PARA j DESDE 0 HASTA tamaño-1 HACER     O(n)
+            SI (v[j] > v[j+1]) ENTONCES 
+                aux := v[j]; 
+                v[j] := v[j+1]; 
+                v[j+1] := aux; 
+            FINSI 
+        FINPARA 
+    FINPARA 
+FINPROCEDIMIENTO 
+
+
+//Al haber dos bucles anidados la complejidad pasaria a ser O(n^2)

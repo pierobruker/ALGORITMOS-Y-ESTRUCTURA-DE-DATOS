@@ -1,0 +1,12 @@
+FUNCION suma (v : VECTOR(ENTERO), tamaño : ENTERO) : ENTERO 
+i, result : ENTERO;                 /O(1)
+result := 0;                        /O(1)
+
+//Un bucle lo convierte en una complejidad (n) ya que cada iteracion cambiara.
+PARA i DESDE 0 HASTA tamaño-1 HACER     /O(n)
+result := result + v[i];            /O(1)
+FINPARA 
+        DEVOLVER result;            /O(1)
+FINFUNCION 
+
+//Complejidad O(n)
